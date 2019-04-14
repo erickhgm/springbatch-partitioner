@@ -1,0 +1,65 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch 
+		http://www.springframework.org/schema/batch/spring-batch-2.2.xsd 
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+		http://www.springframework.org/schema/integration 
+		http://www.springframework.org/schema/integration/spring-integration.xsd">
+
+	<job id="jobPartitioner"
+		xmlns="http://www.springframework.org/schema/batch">
+		<step id="master.step">
+			<partition step="slave.step" partitioner="myPartitioner">
+				<handler grid-size="3" task-executor="taskExecutor" />
+			</partition>
+		</step>
+	</job>
+
+	<step id="slave.step"
+		xmlns="http://www.springframework.org/schema/batch">
+		<tasklet>
+			<chunk reader="xmlItemReader" processor="processor" writer="cvsFileWriter" commit-interval="10" />
+		</tasklet>
+	</step>
+
+	<bean id="processor"
+		class="br.com.ehgm.springbatch.partitioner.step.PartitionerItemProcessor" />
+
+	<bean id="myPartitioner"
+		class="br.com.ehgm.springbatch.partitioner.step.MyPartitioner" />
+
+	<bean id="xmlItemReader"
+		class="org.springframework.batch.item.xml.StaxEventItemReader"
+		scope="step">
+		<property name="resource" value="file:/temp/customers-#{stepExecutionContext[index]}.xml" />
+		<property name="fragmentRootElementName" value="customer" />
+		<property name="unmarshaller">
+			<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+				<property name="classesToBeBound">
+					<list>
+						<value>br.com.ehgm.springbatch.partitioner.model.Customer</value>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="cvsFileWriter"
+		class="org.springframework.batch.item.file.FlatFileItemWriter"
+		scope="step">
+		<property name="resource" value="file:/temp/customers-all.csv" />
+		<property name="appendAllowed" value="true" />
+		<property name="lineAggregator">
+			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+				<property name="delimiter" value="," />
+				<property name="fieldExtractor">
+					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="id, name, email" />
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>
