@@ -48,8 +48,7 @@
 	<bean id="cvsFileWriter"
 		class="org.springframework.batch.item.file.FlatFileItemWriter"
 		scope="step">
-		<property name="resource" value="file:/temp/customers-all.csv" />
-		<property name="appendAllowed" value="true" />
+		<property name="resource" value="file:/temp/customers-#{stepExecutionContext[index]}.csv" />
 		<property name="lineAggregator">
 			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
 				<property name="delimiter" value="," />

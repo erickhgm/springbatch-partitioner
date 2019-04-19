@@ -51,11 +51,10 @@ public class BatchConfiguration extends DefaultBatchConfigurer {
 
 	@Bean
 	@StepScope
-	public FlatFileItemWriter<Customer> writer() {
+	public FlatFileItemWriter<Customer> writer(@Value("#{stepExecutionContext[index]}") String index) {
 		return new FlatFileItemWriterBuilder<Customer>()
 				.name("cvsFileWriter")
-				.resource(new FileSystemResource("/temp/customers-all.csv"))
-				.append(true)
+				.resource(new FileSystemResource("/temp/customers-" + index + ".csv"))
 				.lineAggregator(new DelimitedLineAggregator<Customer>() {{
 					setDelimiter(",");
 					setFieldExtractor(new BeanWrapperFieldExtractor<Customer>() {{
@@ -101,7 +100,7 @@ public class BatchConfiguration extends DefaultBatchConfigurer {
 				.<Customer, Customer> chunk(10)
 				.reader(reader(null))
 				.processor(processor())
-				.writer(writer())
+				.writer(writer(null))
 				.build();
 	}
 
