@@ -1,0 +1,54 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2019-04-15 10:17:33.632  INFO 5812 --- [           main] b.c.e.s.partitioner.Application          : Starting Application on RJOD263824 with PID 5812 (C:\ERICK\workspace-2018-09\springbatch-partitioner-boot\target\classes started by erick.henrique in C:\ERICK\workspace-2018-09\springbatch-partitioner-boot)
+2019-04-15 10:17:33.635  INFO 5812 --- [           main] b.c.e.s.partitioner.Application          : No active profile set, falling back to default profiles: default
+2019-04-15 10:17:34.785  WARN 5812 --- [           main] o.s.b.c.c.a.DefaultBatchConfigurer       : No transaction manager was provided, using a DataSourceTransactionManager
+2019-04-15 10:17:34.821  INFO 5812 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-15 10:17:35.088  INFO 5812 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-15 10:17:35.095  INFO 5812 --- [           main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: H2
+2019-04-15 10:17:35.117  INFO 5812 --- [           main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-04-15 10:17:35.724  WARN 5812 --- [           main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-ws is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-web-services
+2019-04-15 10:17:35.774  INFO 5812 --- [           main] b.c.e.s.partitioner.Application          : Started Application in 2.814 seconds (JVM running for 3.12)
+2019-04-15 10:17:35.775  INFO 5812 --- [           main] o.s.b.a.b.JobLauncherCommandLineRunner   : Running default command line with: []
+2019-04-15 10:17:35.881  INFO 5812 --- [           main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [FlowJob: [name=jobPartitioner]] launched with the following parameters: [{run.id=1}]
+2019-04-15 10:17:35.933  INFO 5812 --- [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [masterStep]
+2019-04-15 10:17:36.126  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 21
+2019-04-15 10:17:36.127  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 22
+2019-04-15 10:17:36.127  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 23
+2019-04-15 10:17:36.127  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 24
+2019-04-15 10:17:36.128  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 25
+2019-04-15 10:17:36.128  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 26
+2019-04-15 10:17:36.128  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 27
+2019-04-15 10:17:36.129  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 28
+2019-04-15 10:17:36.129  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 29
+2019-04-15 10:17:36.129  INFO 5812 --- [nfiguration.3-2] b.c.e.s.partitioner.services.Services    : Customer ID: 30
+2019-04-15 10:17:36.143  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 1
+2019-04-15 10:17:36.143  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 2
+2019-04-15 10:17:36.143  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 3
+2019-04-15 10:17:36.143  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 4
+2019-04-15 10:17:36.143  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 5
+2019-04-15 10:17:36.144  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 6
+2019-04-15 10:17:36.144  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 7
+2019-04-15 10:17:36.144  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 8
+2019-04-15 10:17:36.144  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 9
+2019-04-15 10:17:36.144  INFO 5812 --- [nfiguration.3-1] b.c.e.s.partitioner.services.Services    : Customer ID: 10
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 11
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 12
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 13
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 14
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 15
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 16
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 17
+2019-04-15 10:17:36.153  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 18
+2019-04-15 10:17:36.154  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 19
+2019-04-15 10:17:36.154  INFO 5812 --- [nfiguration.3-3] b.c.e.s.partitioner.services.Services    : Customer ID: 20
+2019-04-15 10:17:36.173  INFO 5812 --- [           main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [FlowJob: [name=jobPartitioner]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+2019-04-15 10:17:36.176  INFO 5812 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-15 10:17:36.194  INFO 5812 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

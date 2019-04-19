@@ -1,0 +1,44 @@
+abr 15, 2019 10:16:20 AM org.springframework.batch.core.launch.support.SimpleJobLauncher afterPropertiesSet
+INFORMAÇÕES: No TaskExecutor has been set, defaulting to synchronous executor.
+abr 15, 2019 10:16:20 AM org.springframework.batch.core.launch.support.SimpleJobLauncher$1 run
+INFORMAÇÕES: Job: [FlowJob: [name=jobPartitioner]] launched with the following parameters: [{}]
+abr 15, 2019 10:16:20 AM org.springframework.batch.core.job.SimpleStepHandler handleStep
+INFORMAÇÕES: Executing step: [master.step]
+abr 15, 2019 10:16:20 AM org.springframework.oxm.jaxb.Jaxb2Marshaller createJaxbContextFromClasses
+INFORMAÇÕES: Creating JAXBContext with classes to be bound [class br.com.ehgm.springbatch.partitioner.model.Customer]
+abr 15, 2019 10:16:20 AM org.springframework.oxm.jaxb.Jaxb2Marshaller createJaxbContextFromClasses
+INFORMAÇÕES: Creating JAXBContext with classes to be bound [class br.com.ehgm.springbatch.partitioner.model.Customer]
+abr 15, 2019 10:16:20 AM org.springframework.oxm.jaxb.Jaxb2Marshaller createJaxbContextFromClasses
+INFORMAÇÕES: Creating JAXBContext with classes to be bound [class br.com.ehgm.springbatch.partitioner.model.Customer]
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 21
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 22
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 23
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 24
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 25
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 26
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 27
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 28
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 29
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 30
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 11
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 12
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 13
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 14
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 15
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 16
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 17
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 18
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 19
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 20
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 1
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 2
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 3
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 4
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 5
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 6
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 7
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 8
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 9
+2019-04-15 10:16:20 INFO  Services:15 - Customer ID: 10
+abr 15, 2019 10:16:20 AM org.springframework.batch.core.launch.support.SimpleJobLauncher$1 run
+INFORMAÇÕES: Job: [FlowJob: [name=jobPartitioner]] completed with the following parameters: [{}] and the following status: [COMPLETED]
